@@ -1,0 +1,60 @@
+.Modal-message-wrapper {
+    background: rgba(0, 0, 0, 0.76);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: rgba(250, 255, 243, 0.96);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 150ms ease, visibility 150ms ease, color 150ms ease;
+}
+
+.Modal-message_show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.Modal-message_hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.Modal-message-wrapper p{
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.Modal-message_error {
+    color: #fd2c2c;
+}
+.Modal-message__close-btn,
+.Modal-message__redirect-link {
+    outline: 0 none;
+    border: 0 none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.Modal-message__close-btn {
+    position: absolute;
+    color: #C1A779;
+    right: 0px;
+    top: 0px;
+    font-size: 1.2rem;
+}
+.Modal-message__redirect-link {
+    display: block;
+    color: #F5F5F5;
+    font-size: 0.8rem;
+    padding: 0;
+    border-bottom: 1px solid #F5F5F5;
+    font-weight: 600;
+}

@@ -1,0 +1,92 @@
+.View {
+    position: relative;
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    transition: all 0.5s;
+    transition-timing-function: cubic-bezier(0.19, 0.16, 0.28, 0.9);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+@media only screen and (min-height: 400px) {
+    .View {
+        padding-top: var(--headerHeight);
+    }
+}
+
+@media only screen and (min-width: 340px) and (min-height: 500px) {
+    .View_left:before,
+    .View_right:before,
+    .View_left:after,
+    .View_right:after {
+        content: "";
+        display: block;
+        width: 0.25rem;
+        height: 2rem;
+        background-color: #a9946e;
+        position: absolute;
+    }
+
+    .View_left:after,
+    .View_right:after {
+        bottom: 0;
+    }
+
+    .View_left:before,
+    .View_right:before {
+        top: 0;
+    }
+
+    .View_right:before,
+    .View_left:after {
+        right: 3rem;
+    }
+
+    .View_left:before,
+    .View_right:after {
+        left: 4.55rem;
+    }
+    .View_left:last-child:before,
+    .View_right:last-child:after {
+        content: none;
+    }
+}
+
+
+@media only screen and (min-width: 340px) {
+    .View_right:before, .View_left:after {
+        right: 2.8rem;
+    }
+}
+@media only screen and (min-width: 480px){
+    .View_right:before,
+    .View_left:after {
+        right: 3rem;
+    }
+
+    .View_left:before,
+    .View_right:after {
+        left: 5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .View_right:before,
+    .View_left:after {
+        right: 3.8rem;
+    }
+    .View_left:before,
+    .View_right:after {
+        left: 5.8rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .View_right:before, .View_left:after {
+        right: 11.5%;
+    }
+    .View_left:before, .View_right:after {
+        left: 14%;
+    }
+}

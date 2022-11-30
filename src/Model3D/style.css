@@ -1,0 +1,81 @@
+#three-container {
+    height: 100%;
+    overflow: hidden;
+}
+canvas {
+    display: block;
+}
+.model3d-container {
+    background: #212121;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 200ms ease, visibility 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bca77f;
+    font-size: 2rem;
+    z-index: 1;
+}
+#model-container {
+    height: 100%;
+}
+.model3d-hide {
+    opacity: 1;
+    visibility: visible;
+}
+
+.model3d-show {
+    opacity: 0;
+    visibility: hidden;
+}
+.model3d-loader {
+    position: relative;
+    width: 200px;
+    border: 1px solid rgba(188, 167, 127, 0.38);;
+    border-radius: 3px;
+    height: 25px;
+    text-align: center;
+}
+
+.model3d-loader-progress,
+.model3d-loader-progressbar {
+    display: block;
+    height: 100%;
+}
+.model3d-loader-progressbar {
+    background: #30302f;
+}
+.model3d-loader-progress {
+    color: rgba(188, 167, 127, 0.8);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    line-height: 25px;
+    text-align: center;
+}
+
+/*Map*/
+.map-layer-model {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    z-index: 2222222;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.map-layer-model-point {
+    fill: red;
+    stroke: red;
+}
+.map-layer-model-point-center {
+    fill: lime;
+    stroke: lime;
+}

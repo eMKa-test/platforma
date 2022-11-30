@@ -1,0 +1,6 @@
+.Calendar .react-calendar {
+    width: 100%;
+}
+.react-calendar__tile--active {
+    color: #73ff1b;
+}

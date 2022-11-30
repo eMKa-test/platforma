@@ -1,0 +1,55 @@
+.ChangePWD {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ChangePWD-body {
+    height: 100%;
+}
+
+.ChangePWD-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ChangePWD-header h3 {
+    margin: 0.5rem;
+    color: #b0a187;
+}
+
+.ChangePWD-close {
+    outline: 0 none;
+    border: 0 none;
+    color: #b0a187;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.ChangePWD-inputs-wrapper input[type="password"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background-color: #1f1f27;
+    outline: 0 none;
+    border: 0 none;
+    color: #B0A187;
+    font-size: 1.1rem;
+}
+
+.ChangePWD [type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #B0A187;
+    outline: 0 none;
+    border: 0 none;
+    color: #1f1f27;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

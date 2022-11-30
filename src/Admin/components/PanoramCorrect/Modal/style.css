@@ -1,0 +1,151 @@
+.Overlay{
+    background: rgba(0,0,0,0.7);
+    z-index: 2;
+}
+.Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1040;
+}
+.Modal{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.Modal-content{
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Modal-content_adaptive-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+.moadl-panoram_close-btn{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+    z-index: 999;
+}
+.moadl-panoram_close-btn img{
+    width: 25px;
+}
+.modal__wrapper {
+    width: 100%;
+}
+.modal__wrapper-adaptive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.modal__main-container {
+    position: relative;
+    width: 100%;
+}
+.modal__item-container {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    justify-content: center;
+}
+.select__button-item {
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: #00000062;
+    color: white;
+    top: 50%;
+    height: 50%;
+    transform: translate(0, -50%);
+    transition: color 0.2s, background 0.2s;
+    z-index: 1;
+}
+.select__button-item img {
+    width: 35px;
+    height: 35px;
+    display: block;
+}
+.select__button-item:focus {
+    outline: none;
+}
+.select__button-item:hover {
+    background: var(--goldColorLow);
+    color: var(--goldColor);
+}
+.button__previous-item {
+    left: 0;
+}
+
+.button__next-item {
+    right: 0;
+}
+
+.wrapper__panoram-items {
+    width: 20%;
+    margin: 0 20px;
+    opacity: 0.7;
+    filter: grayScale(0.3);
+    transition: opacity 0.3s;
+}
+
+.item__wrapper-btn {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.active__item {
+    opacity: 1;
+    filter: grayScale(0);
+}
+
+.active__frame {
+    box-shadow: 2px 6px 18px -4px var(--goldColor);
+}
+.show__content-type {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

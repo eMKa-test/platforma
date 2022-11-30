@@ -1,0 +1,118 @@
+.edit-info-wrapper {
+    position: absolute;
+    z-index: 401;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.edit-info-btn {
+    font-size: 1.3rem;
+    transition: color 50ms;
+    animation: highlighting 2000ms linear infinite;
+}
+
+@keyframes highlighting {
+    0% {
+        color: #0b97c4;
+    }
+    20% {
+        color: #0ba5d3;
+    }
+    40% {
+        color: #0fc1d7;
+    }
+    60% {
+        color: #17e0e4;
+    }
+    80% {
+        color: #0fc1d7;
+    }
+    100% {
+        color: #0ba5d3;
+    }
+}
+
+.edit-info-body {
+    box-shadow: 6px 6px 14px -3px rgba(0, 0, 0, 0.3);
+    width: 360px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid black;
+    position: absolute;
+    left: calc(100% + 15px);
+    top: 50%;
+    transform-origin: 0 50%;
+    z-index: 1;
+    transition: opacity 100ms ease, visibility 100ms ease, transform 150ms ease;
+}
+
+.edit-info-body:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -9px;
+    background: white;
+    top: 50%;
+    transform: translateY(-50%)rotate(-51deg);
+    border-radius: 0 0 3px 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    border-color: black transparent transparent black;
+}
+
+.info-body_open {
+    transform: translateY(-50%)rotate(0deg);
+    opacity: 1;
+    visibility: visible;
+}
+
+.info-body_close {
+    transform: translateY(-50%)rotate(20deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.edit-info-body__title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px dashed black;
+}
+
+.edit-info-body__paragraph {
+    margin-bottom: 0.5rem;
+    text-indent: 0.5rem;
+}
+
+.edit-info-body__paragraph-one {
+
+}
+
+.edit-info-body__paragraph-two {
+
+}
+
+.edit-info-body__paragraph-three {
+
+}
+
+.edit-info-close-info {
+    position: absolute;
+    right: -19px;
+    top: -13px;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

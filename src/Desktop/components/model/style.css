@@ -1,0 +1,51 @@
+#three-container {
+    height: 100%;
+    overflow: hidden;
+}
+canvas {
+    display: block;
+}
+
+.model-stub {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 500ms ease, visibility 500ms;
+}
+.model-stub_show {
+    opacity: 1;
+    visibility: visible;
+}
+.model-stub_hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.model-stub__mask {
+    width: 200px;
+    height: 80px;
+}
+.model-stub img {
+    display: block;
+}
+.model-stub__value {
+    position: absolute;
+    font-family: "Gilroy", sans-serif;
+    font-size: 1.2rem;
+    color: #C1A779;
+}
+.dg.ac {
+    z-index: 9;
+}
+#gui-container {
+    position: absolute;
+    z-index: 1;
+    top: 55px;
+    right: 0;
+}

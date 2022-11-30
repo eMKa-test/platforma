@@ -1,0 +1,163 @@
+.marker-cluster-custom{
+    border: 2px solid var(--goldColor);
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.1);
+    background-image: url("../../assets/icons/cluster.png");
+    background-position: 51% 13%;
+    background-repeat: no-repeat;
+    background-size: 56%;
+    color: cornsilk;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 23px 0;
+    line-height: 2;
+    box-shadow: 3px 2px 19px 2px rgba(0,0,0,.82);
+    text-shadow: 1px 1px 2px black;
+    transition: .3s;
+  }
+  .leaflet-retina .leaflet-control-layers-toggle,
+  .leaflet-control-layers-toggle {
+      background-size: 60%;
+  }
+  .leaflet-control-layers,
+  .leaflet-control{
+    background: rgba(0,0,0,0.82);
+    color: var(--goldColor);
+    border: 1px solid var(--goldColor);
+    font-size: 1.1rem;
+  }
+  .leaflet-control-layers-overlays span {
+      font-family: Gilroy,sans-serif;
+  }
+  .leaflet-control-layers-separator{
+    border-top: 1px solid var(--goldColor);
+  }
+
+  .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 1px solid var(--goldColor);
+  }
+  .leaflet-touch .leaflet-bar a,
+  .leaflet-bar a,
+  .leaflet-touch .leaflet-bar a:first-child,
+  .leaflet-touch .leaflet-bar a:last-child,
+  .leaflet-bar a:first-child,
+  .leaflet-bar a:last-child{
+    background: rgba(0,0,0,0.82);
+    color: var(--goldColor);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0;
+  }
+  .leaflet-bar{
+    border-radius:0;
+  }
+  .leaflet-touch .leaflet-bar a:first-child,
+  .leaflet-bar a{
+    border-bottom: 1px solid var(--goldColor);
+  }
+
+  .leaflet-bar a:hover,
+  .leaflet-touch .leaflet-bar a:hover{
+    background: rgba(250, 250, 250, 0.2);
+  }
+  .leaflet-container .leaflet-control-attribution {
+    visibility: hidden;
+  }
+  @media only screen and (min-width: 300px) {
+    .leaflet-touch .leaflet-bar a{
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+    }
+}
+@media only screen and (min-width: 991px) {
+    .leaflet-touch .leaflet-bar a{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+  .leaflet-popup-content-wrapper,
+  .leaflet-popup-tip{
+      background: rgba(0, 0, 0, 0.8);
+      color: #a6a6a6;
+      border-radius: 0;
+      border: .5px solid #a6a6a6;
+  }
+  .leaflet-popup-content{
+      max-width: 280px;
+      min-width: 150px;
+      margin: 5px;
+  }
+  section.popup-container p{
+      border-bottom: .5px solid #a6a6a6;
+      padding-bottom: 2px;
+      line-height: 1.4rem;
+      font-size: 1.1rem;
+  }
+  section.popup-container span{
+      font-size: 1rem;
+  }
+  section.popup-container div{
+      text-align: right;
+      margin-top: 4px;
+  }
+  section.popup-container div button{
+      background: var(--goldColor);
+      color: #000;
+      border: none;
+      outline: none;
+      padding: 3px 6px;
+      font-size: 1rem;
+  }
+  section.popup-container div button:active{
+      background: var(--goldColor);
+  }
+  .map-popUp-context{
+      margin-top: 6px;
+      display: inline-block;
+  }
+  .leaflet-tooltip-top:before{
+      border-top-color: var(--goldColor);
+  }
+  .leaflet-tooltip-right:before{
+      border-right-color: var(--goldColor);
+      border-radius: 0;
+  }
+  .leaflet-tooltip{
+    border-radius: 0;
+  }
+  .leaflet-tooltip-bottom:before{
+      border-bottom-color: var(--goldColor);
+  }
+  .leaflet-tooltip-left:before{
+      border-left-color: var(--goldColor);
+  }
+  .polyline{
+      cursor: pointer;
+      stroke: #146bd7e0;
+      transition: stroke .2s;
+  }
+  .polyline:hover{
+      stroke: #3ad779b0;
+  }
+  .map_tooltip_container-preview{
+      position: relative;
+      width: 150px;
+      display: block;
+  }
+  .map_tootltip_container-preview-img{
+      display: block;
+      width: 100%;
+      height: 90px;
+  }
+  .desktop__polyline {
+      stroke: var(--mapPolyline);
+      transition: stroke 200ms;
+  }
+  .desktop__polyline:hover {
+      stroke: var(--mapPolylineHover);
+  }

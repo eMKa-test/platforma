@@ -1,0 +1,153 @@
+:root {
+    --goldColor: #bea67c;
+    --goldColorFade: #bea67c00;
+    --goldColorLow: #bea67c40;
+    --mapPolyline: #3eadeef0;
+    --mapPolylineHover: #81cced;
+}
+
+html{
+    font-size: 16px;
+    background-color: #1F1F27;
+}
+
+#root,
+.desktop-content{
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+body{
+    background-color: #1F1F27;
+    font-family: Gilroy, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+}
+
+.desktop-container{
+    position: relative;
+    display: flex;
+}
+
+.desktop-content{
+    width: 100%;
+}
+
+.desktop-main{
+    font-size: 1.2rem;
+}
+
+button:focus{
+    outline: none;
+}
+
+.aside-bg{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/bg_aside.jpg);
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: -1;
+}
+
+.aside-bg:after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.88);
+}
+
+.slick-list{
+    min-height: 100%;
+}
+
+.shift-enter {
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 1;
+}
+
+.shift-enter.shift-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.shift-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.shift-exit-active {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.alert-enter {
+    opacity: 0;
+    transform: scale(0.9);
+}
+.alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+}
+.alert-exit {
+    opacity: 1;
+}
+.alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.trackY {
+    background: var(--goldColor);
+    top: 0 !important;
+    bottom: 0 !important;
+    right: 1px !important;
+    height: 100% !important;
+    width: 8px !important;
+}
+
+.thumbY {
+    background: var(--goldColorFade);
+    transition: background 0.2s;
+}
+.thumbY:hover {
+    background: var(--goldColorFade) !important;
+}
+.thumbY:active {
+    background: var(--goldColorFade) !important;
+}
+#gui-container {
+    position: absolute;
+    top: 0;
+
+}

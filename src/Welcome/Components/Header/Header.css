@@ -1,0 +1,106 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: var(--headerHeight);
+    background-color: #0f0b0f;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--leftGutter);
+    padding-right: var(--leftGutter);
+}
+
+.AuthModal-toggle-buttons {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.AuthModal-header-button{
+    display: block;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background 50ms ease, color 50ms ease;
+}
+
+.AuthModal-body {
+    height: 100%;
+}
+
+.AuthModal-title {
+    color: #C1A779;
+    margin: 0;
+}
+
+.AuthModal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.AuthModalHeader-title {
+    padding: 0;
+    margin: 0;
+    color: #C1A779;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.AuthModal-close {
+    outline: 0 none;
+    border: 0 none;
+    color: #C1A779;
+    background: transparent;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.ReactModal__Content {
+    display: flex;
+    flex-direction: column;
+}
+
+.ReactModal__Overlay {
+    z-index: 20;
+}
+
+.ReactModalPortal > div {
+    opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+    transition: opacity 200ms ease-in-out;
+    background: rgba(0, 0, 0, 0.15);
+}
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.LoginForm-link,
+.RestoreForm-link,
+.RegisterForm-link {
+    padding: 0;
+    background: transparent;
+    outline: none;
+    color:  #F5F5F5;
+    border-bottom: 1px dashed #F5F5F5;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+.FormsView-footer {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}

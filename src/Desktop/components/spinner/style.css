@@ -1,0 +1,84 @@
+.spinner__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 16px);
+    background: rgba(0,0,0,0.38);
+}
+
+.spinner__wrapper__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+    perspective: 1200px;
+
+}
+.spinner__wrapper__icon-container {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    perspective: 800px;
+    z-index: 1;
+}
+
+.spin-container_1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)rotate3d(1, 1, 0, 0deg);
+    transform-style: preserve-3d;
+    z-index: 2;
+    animation: rotateRing_3 2s linear infinite;
+}
+
+@keyframes rotateRing_1 {
+    0%{transform: translate(-50%, -50%)rotate3d(1, 1, 0, 0deg);}
+    100%{transform: translate(-50%, -50%)rotate3d(1, 1, 0, 360deg);}
+}
+
+.spin-container_2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)rotate3d(1, -1, 0, 0deg);
+    z-index: 2;
+    animation: rotateRing_2 1.7s linear infinite;
+}
+
+@keyframes rotateRing_2 {
+    0%{transform: translate(-50%, -50%)rotate3d(1, -1, 0, 0deg);}
+    100%{transform: translate(-50%, -50%)rotate3d(1, -1, 0, 360deg);}
+}
+
+.spin-container_3 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)rotate3d(0, 1, 0, 0deg);
+    z-index: 2;
+    animation: rotateRing_1 1.7s linear infinite;
+}
+
+@keyframes rotateRing_3 {
+    0%{transform: translate(-50%, -50%)rotate3d(0, 1, 0, 0deg);}
+    100%{transform: translate(-50%, -50%)rotate3d(0, 1, 0, -360deg);}
+}
+
+.spinner__wrapper__platforma-icon {
+    display: block;
+    width: 30px;
+    position: absolute;
+    opacity: 0.5;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)rotate3d(0, 1, 0, 0deg);
+    animation: rotatePlatformIcon 500ms linear infinite;
+}
+
+@keyframes rotatePlatformIcon {
+    0%{transform: translate(-50%, -50%)rotate3d(0, 1, 0, 0deg);}
+    100%{transform: translate(-50%, -50%)rotate3d(0, 1, 0, 360deg);}
+}

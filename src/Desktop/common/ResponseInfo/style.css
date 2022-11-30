@@ -1,0 +1,31 @@
+.admin-response-info-container {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 30px;
+    z-index: 1020;
+    border-radius: 3px;
+    transform: translate(-50%);
+    transition: visibility 100ms ease-in, opacity 100ms ease-in;
+}
+.admin-response-info-container__show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.admin-response-info-container__hide {
+    visibility: hidden;
+    opacity: 0;
+}
+.admin-response-info-title {
+    margin: 0;
+    padding: 0;
+}
+.response-title__success {
+    color: #61ff8f;
+}
+
+.response-title__error {
+    color: #ee5c5a;
+}

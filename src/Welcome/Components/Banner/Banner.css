@@ -1,0 +1,99 @@
+.Banner {
+    background-image: url("./assets/banner-background.jpg");
+    background-position: 50%;
+    background-size: cover;
+    padding-left: 3rem;
+}
+
+.Banner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.76);
+}
+
+.Banner-title {
+    margin-top: -1rem;
+    color: #bea67c;
+    font-family: Gilroy, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.Banner-text {
+    color: #fff;
+    text-align: left;
+    font-family: Gilroy, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    max-width: 55rem;
+}
+
+.Banner-mouseicon {
+    margin-top: 1rem;
+}
+
+.touch .Banner-mouseicon {
+    display: none;
+}
+
+@media only screen and (min-width: 480px) {
+    .Banner-title {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Banner-title {
+        font-size: 4rem;
+    }
+    .Banner-container {
+        padding-left: 7rem;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .Banner-title {
+        font-size: 4.75rem;
+    }
+    .Banner-container {
+        padding-left: 11rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .Banner-title {
+        font-size: 5.25rem;
+        letter-spacing: 6px;
+    }
+    .Banner-container {
+        padding-left: 16rem;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .Banner-title {
+        font-size: 5.75rem;
+    }
+    .Banner-container {
+        padding-left: 22rem;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .Banner-title {
+        font-size: 6.25rem;
+    }
+    .Banner-container {
+        padding-left: 29rem;
+    }
+}

@@ -1,0 +1,105 @@
+.leaflet-control-layers,
+.leaflet-control {
+    background: rgba(0, 0, 0, 0.82);
+    color: rgba(188, 167, 127, 0.7);
+    border: 1px solid rgba(188, 167, 127, 0.7);
+    font-size: 1.1rem;
+}
+.leaflet-control-layers-separator {
+    border-top: 1px solid rgba(188, 167, 127, 0.8);
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+    border: 1px solid rgba(188, 167, 127, 0.7);
+}
+.leaflet-touch .leaflet-bar a,
+.leaflet-bar a,
+.leaflet-touch .leaflet-bar a:first-child,
+.leaflet-touch .leaflet-bar a:last-child,
+.leaflet-bar a:first-child,
+.leaflet-bar a:last-child {
+    background: white;
+    color: black;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+.leaflet-bar {
+    border-radius: 0;
+}
+.leaflet-touch .leaflet-bar a:first-child,
+.leaflet-bar a {
+    border-bottom: 1px solid rgba(188, 167, 127, 0.8);
+}
+
+.leaflet-bar a:hover,
+.leaflet-touch .leaflet-bar a:hover {
+    background: #e0e0e0;
+}
+.leaflet-container .leaflet-control-attribution {
+    visibility: hidden;
+}
+.admin-polyline {
+    cursor: default;
+    stroke: red;
+}
+.submit-new-position {
+    padding: 10px;
+    background: rgba(250, 250, 250, 0.5);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1018;
+}
+.admin-marker-index-description {
+    position: absolute;
+    top: 8%;
+    color: #000000;
+    font-size: 0.7rem;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    left: 50%;
+}
+.marker-index-hide {
+    background: transparent;
+}
+.marker-index-show {
+    background: white;
+}
+.admin-map_status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 400;
+    width: 300px;
+    background: rgba(250, 250, 250, 0.5);
+    padding: 10px 5px;
+    font-size: 1.05rem;
+    text-align: center;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+.status_show {
+    opacity: 1;
+    visibility: visible;
+}
+.status_hide {
+    opacity: 0;
+    visibility: hidden;
+}
+.map-status_icon {
+    width: 26px;
+    display: block;
+}

@@ -1,0 +1,21 @@
+.content-loader {
+    background: #1f1f27;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.content-load__off {
+    opacity: 0;
+    visibility: hidden;
+}
+.content-load__on {
+    opacity: 1;
+    visibility: visible;
+}

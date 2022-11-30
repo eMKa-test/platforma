@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello-4" horiz-adv-x="1000" >
+<font-face font-family="fontello-4" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="cloud" unicode="&#xe800;" d="M948 554c-52 210-265 337-474 284-164-41-283-182-295-351-117-19-195-129-176-245 17-103 107-179 211-179h142v72h-142c-78 0-142 63-142 142 0 78 64 142 142 142 20 0 36 16 36 36 0 176 143 320 319 320 153 0 285-108 315-258 3-15 15-27 30-29 97-14 165-104 151-201-13-87-87-152-175-152h-107v-72h107c137 1 248 113 248 250 0 114-79 214-190 241z m-343-583v341h-71v-341l-81 82-50-50 142-143c14-13 36-13 50 0l142 143-50 50-82-82z" horiz-adv-x="1160" />
+</font>
+</defs>
+</svg>

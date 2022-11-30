@@ -1,0 +1,25 @@
+.wrapperMap {
+    height: 100%;
+    z-index: 400;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: box-shadow 150ms ease;
+}
+
+.wrap_hide {
+    box-shadow: none;
+    visibility: hidden;
+}
+
+.wrap_show {
+    box-shadow: inset 0px 0px 13px 0px #ff5b00;
+    visibility: visible;
+}
+.painter-fill {
+    position: absolute;
+    border: 1px dashed white;
+    background: rgba(0,0,0,0.3);
+}

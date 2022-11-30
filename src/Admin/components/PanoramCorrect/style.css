@@ -1,0 +1,485 @@
+
+.ril-caption{
+    max-height: 135px;
+    user-select: none;
+}
+.ril__captionContent{
+    display: flex;
+    user-select: none;
+}
+.thumb-lightbox-item{
+    width: 150px;
+    height: 90px;
+}
+.thumb-lightbox-wrapper{
+    margin: 0 5px;
+    cursor: pointer;
+    border: 3px solid rgba(250,250,250,.3);
+    transition: opacity .2s;
+}
+
+.thumb-lightbox-wrapper:hover{
+    opacity: 1;
+}
+.item_select{
+    opacity: 1;
+    border: 3px solid #bca77f;
+}
+.item_preview{
+    opacity: .8;
+}
+
+.panos {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.preview {
+    cursor: pointer;
+    padding: 2px;
+    vertical-align: middle;
+    width: 42px;
+    position: relative;
+}
+.preview__container {
+    transform: translateX(-21px);
+    background: rgba(0,0,0,0.26);
+    border-radius: 2px;
+}
+.preview__container-edit{
+    transform: translateX(-21px);
+    background: #0da533;
+    border-radius: 15%;
+}
+@media only screen and (min-width: 1024px) {
+    .previw_description{
+        width: 250px;
+        height: 150px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .previw_description{
+        width: 280px;
+        height: 168px;
+    }
+}
+@media only screen and (min-width: 1800px) {
+    .previw_description{
+        width: 350px;
+        height: 210px;
+    }
+}
+.marz-container_panorams-fulls-group_btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 111;
+}
+.marz-container_panorams-fulls_map{
+    color: rgba(250,250,250,.4);
+    font-size: 1rem;
+    padding: 5px;
+    display: flex;
+    margin-top: 0;
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(188,167,127,.7);
+    outline: transparent;
+    transition: background .2s, color .2s;
+}
+.marz-container_panorams-radar_map{
+    color: rgba(250,250,250,.4);
+    font-size: 1rem;
+    padding: 5px;
+    display: flex;
+    margin-top: 5px;
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(188,167,127,.7);
+    outline: transparent;
+    transition: background .2s, color .2s;
+}
+.marz-container_full-screen-button{
+    color: rgba(250,250,250,.4);
+    font-size: 1rem;
+    position: absolute;
+    left: 10px;
+    padding: 5px;
+    z-index: 111;
+    display: flex;
+    margin-top: 5px;
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(188,167,127,.7);
+    outline: transparent;
+    transition: background .2s, color .2s;
+}
+.marz-container_panorams-fulls_map img,
+.marz-container_panorams-radar_map img,
+.marz-container_full-screen-button img{
+    opacity: 0.7;
+}
+@media only screen and (min-width: 300px) {
+    .marz-container_panorams-fulls_map img,
+    .marz-container_panorams-radar_map img,
+    .marz-container_full-screen-button img{
+        width: 14px;
+    }
+    .marz-container_full-screen-button{
+        top: 67px;
+    }
+}
+@media only screen and (min-width: 991px) {
+    .marz-container_panorams-fulls_map img,
+    .marz-container_panorams-radar_map img,
+    .marz-container_full-screen-button img{
+        width: 18px;
+    }
+    .marz-container_full-screen-button{
+        top: 75px;
+    }
+}
+.marz-container_panorams-fulls_map:hover,
+.marz-container_panorams-radar_map:hover,
+.marz-container_full-screen-button:hover{
+    background: rgba(0,0,0,.8);
+    color: #bca77f;
+}
+.full-screen__wrapper{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+}
+.container-hotspot__next,
+.container-hotspot__prev{
+    padding: 8px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    transform: translateX(-24.5px);
+}
+.hotspot__next,
+.hotspot__prev{
+    width: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    vertical-align: middle;
+    z-index: 1031;
+    border-radius: 50%;
+    transition: background 0.25s ease;
+}
+
+.container-hotspot__next:hover > .hotspot__next,
+.container-hotspot__prev:hover > .hotspot__prev {
+    background: #ffffff60;
+}
+
+.container-hotspot__next:hover > .hotspot_edit__next,
+.container-hotspot__prev:hover > .hotspot_edit__prev {
+    display: block;
+}
+
+.hotspot_edit__next,
+.hotspot_edit__prev {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 30px;
+    height: 30px;
+    background: coral;
+    display: none;
+    transition: background 200ms;
+}
+.hotspot_edit__next:hover,
+.hotspot_edit__prev:hover {
+    background: lime;
+}
+
+.marz-container_wrapper-panorams {
+    height: 600px;
+    position: relative;
+}
+.full-screen__wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+}
+.marz-container_correct,
+.modal-marz-container{
+    position: relative;
+    overflow: hidden;
+}
+.marz-modal-wrap{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(250,250,250, 0.3);
+}
+.marz-modal_container{
+    background: #000;
+    height: 100%;
+}
+.marz-modal-control{
+    z-index: 10000;
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    padding: 10px 0;
+    width: 100%;
+    transition: background 0.2s;
+}
+.marz-modal-control:hover{
+    background: rgba(0,0,0,.5);
+}
+.preview-map-position{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    position: relative;
+}
+.position__lt:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+.position__lb:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+.position__rb:after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+.position__rt:after{
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 7px;
+    height: 7px;
+    background: white;
+}
+.select-view-btn{
+    background: rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+.select-view-btn:hover{
+    background: var(--goldColor);
+}
+.select-view-btn:focus{
+    background: var(--goldColor);
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.map_active{
+    background: var(--goldColor);
+}
+.marz-modal-out_btn{
+    background: rgba(0,0,0,0.4);
+    color: var(--goldColor);
+    border: 1px solid var(--goldColor);
+    margin-right: 20px;
+    float: right;
+}
+.marz-modal-out_btn:hover{
+    background: rgba(250,250,250,0.2)
+}
+.marz-container-map_layer{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease, visibility 0.2s;
+    z-index: 0;
+}
+
+.map_layer_hide{
+    opacity: 0;
+    visibility: hidden;
+}
+.map_layer_show{
+    opacity: 1;
+    visibility: visible;
+}
+.customArrow{
+    width: 40px;
+    height: 40px;
+    border-top: 0;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 38px solid red;
+}
+.vision-direction__container-button-close{
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+    background: center / cover no-repeat url("../../../Desktop/assets/icons/close_icon.png") ;
+    border: none;
+}
+.disablePan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show__pan {
+    visibility: visible;
+    opacity: 1;
+}
+.hide__pan {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.correct-pan_separate__cur-pos,
+.correct-pan_separate__base-pos {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.correct-pan_separate__cur-pos {
+    border: 1px dashed;
+}
+.start-edit:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 20px solid lime;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+}
+.correct-pan_separate__last-pos {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 20px solid lime;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 1px;
+    z-index: 1;
+}
+.correct-pan_separate__base-pos {
+    background: red;
+    width: 2px;
+}
+.correct-pan_separate__base__description {
+    display: block;
+    position: absolute;
+    top: 54px;
+    left: -50px;
+    color: red;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    transform: rotate(90deg);
+}
+.spot-number {
+    display: block;
+    color: white;
+    background: rgba(212, 211, 37, 0.54);
+}
+.preview__current_content_edit {
+    z-index: 55;
+    position: absolute;
+    right: 0;
+}
+
+.stepper__spot {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    transform: translateX(-20px);
+    background: coral;
+    text-align: center;
+    cursor: pointer;
+    transition: background 150ms;
+}
+.stepper__spot:hover {
+    background: rgba(255,255,255,0.4);
+}
+.marz-container_step-group-btns {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    z-index: 1;
+}
+.step-group-btns__next,
+.step-group-btns__prev {
+    display: flex;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.step-group-btns__next:focus,
+.step-group-btns__prev:focus {
+    outline: none;
+}
+.step-group-btns__next img {
+    display: block;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    padding: 3px;
+    transition: background 150ms;
+}
+.step-group-btns__prev img {
+    display: block;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    padding: 3px;
+    transform: rotate(-180deg);
+    transition: background 150ms;
+}
+.step-group-btns__next img:hover,
+.step-group-btns__prev img:hover {
+    background: rgba(255,255,255,0.6);
+}

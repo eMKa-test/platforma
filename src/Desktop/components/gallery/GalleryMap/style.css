@@ -1,0 +1,11 @@
+.leaflet-container .leaflet-control-attribution {
+    visibility: hidden;
+}
+.leaflet-tooltip{
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.leaflet-tooltip:before{
+    display: none;
+}

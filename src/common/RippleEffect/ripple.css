@@ -1,0 +1,27 @@
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #C1A779, #C1A779);
+    width: 260px;
+    height: 260px;
+    z-index: 3;
+    animation-name: ripple;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1, 1);
+        opacity: 0;
+    }
+}

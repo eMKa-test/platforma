@@ -1,0 +1,73 @@
+.float-calendar {
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+}
+
+.float-calendar__selected {
+    margin-left: 0.5rem;
+}
+
+.float-calendar__toggler {
+    border: 0 none;
+    outline: 0 none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--goldColor);
+}
+
+.float-calendar__list-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+    will-change: opacity, visibility;
+    background: #1F1F27;
+    max-width: 310px;
+    min-width: 180px;
+    max-height: 300px;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 3;
+    border-radius: 3px;
+}
+
+.float-calendar__list-wrapper_active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.float-calendar__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.float-calendar__list-item {
+    border-top: 1px solid rgba(171, 180, 189, 0.18);
+}
+
+.float-calendar__list-item:first-child {
+    border-top: 0 none;
+}
+
+.float-calendar__list-button {
+    outline: 0 none;
+    border: 0 none;
+    background-color: transparent;
+    color: var(--goldColor);
+    padding: 0.45rem 1rem 0.6rem;
+    cursor: pointer;
+}
+
+.float-calendar__reset {
+    color: var(--goldColor);
+    outline: 0 none;
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+}

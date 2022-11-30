@@ -1,0 +1,17 @@
+.LoginButton {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    box-shadow: 8px 14px 26px rgba(0, 0, 0, 0.15);
+    background-color: #a9946e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginButton img {
+    max-width: 50%;
+
+
+}

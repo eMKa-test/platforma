@@ -1,0 +1,47 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "env": {
+        "node": true,
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "globals": {
+        "moment": true,
+        "__APP_VERSION__": true,
+        "warn": true,
+        "debug": true
+    },
+    "extends": "airbnb",
+    "plugins": ["eslint-plugin-react"],
+    "rules": {
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "operator-linebreak": ["error", "before", { "overrides": { "&&": "after" } }],
+        "max-len": ["error", { "code": 120 }],
+        "quotes": ["error", "double"],
+        "one-var": "off",
+        "one-var-declaration-per-line": "off",
+        "arrow-parens": ["error", "always"],
+        "arrow-body-style": 0,
+        "jsx-quotes": ["error", "prefer-double"],
+        "no-param-reassign": 0,
+        "react/jsx-fragments": 0,
+        "react/destructuring-assignment": 0,
+        "react/jsx-indent": [2, 4],
+        "react/jsx-indent-props": [2, 4],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-closing-bracket-location": [1, { "nonEmpty": "after-props", "selfClosing": "after-props" }],
+        "react/jsx-first-prop-new-line": [1, "multiline"],
+        "react/jsx-max-props-per-line": [1, { "maximum": 1 }],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/require-default-props": 0,
+        "react/forbid-prop-types": 0,
+        "react/sort-comp": 0,
+        "import/extensions": "warn"
+    },
+    "settings": {
+        "import/resolver": "babel-module"
+    }
+}

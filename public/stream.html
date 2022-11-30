@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<video id="video" controls></video>
+<script>
+    if(Hls.isSupported())
+    {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('http://192.168.0.194:3000/stream/1/master.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function()
+        {
+            video.play();
+        });
+    }
+    // else if (video.canPlayType('application/vnd.apple.mpegurl'))
+    // {
+    //     video.src = './output0.ts';
+    //     video.addEventListener('canplay',function()
+    //     {
+    //         video.play();
+    //     });
+    // }
+</script>
+
+http://192.168.0.194:3000/stream/24/playlist.m3u8
+http://192.168.0.194:3000/stream/1/playlist.m3u8
+http://192.168.0.194:3000/stream/1/master.m3u8
+https://platforma.tech/stream/1/playlist.m3u8
+https://platforma.tech/stream/1/master.m3u8
+http://192.168.0.194:3000/stream/1/playlist.m3u8?sessionID=qqqq
+
+http://192.168.0.194:3000/stream/1/master.m3u8
+http://192.168.0.194:3000/stream/2/master.m3u8
+http://192.168.0.194:3000/stream/2/playlist.m3u8?sessionID=qqqq
+
+ffmpeg -i file.mp4 -c:v libx264 -crf 22 -preset veryfast -c:a libfdk_aac -vbr 3 -force_key_frames expr:gte(t,n_forced*60) -f segment -segment_time 60 -segment_list list.m3u8 output%03d.ts
+ffmpeg -i file.mp4 -force_key_frames "expr:gte(t,n_forced*5)" -f segment -segment_time 5 -segment_list list.m3u8 output%02d.ts
+ffmpeg -i file.mp4 -force_key_frames "expr:gte(t,n_forced*8)" -b:v 3500k -f segment -segment_time 8 -segment_list list.m3u8 output%02d.ts
+ffmpeg -i file.mp4 -force_key_frames "expr:gte(t,n_forced*8)" -profile:v baseline -level 3.0 -start_number 0 -hls_time 8 -hls_list_size 0 -b:v 3500k -f hls output.m3u8
+
+udp:/178.236.136.215
+
+178.236.136.215:3001/1/stream.mp4
+
+http://platforma.tech/public/playlist.m3u
+
+vlc -vvv --vlm-conf=./vlc.streaming.conf
+
+cvlc -vvv ./stream/test.mp4 --repeat --sout-keep --no-sout-audio --sout="#transcode{vcodec=h264}:std{access=http, mux=flv, dst=':3001/stream.mp4'}"
+
+gather:std
+disown cvlc -vvv ./stream/1/video.mp4 --repeat --sout-keep --no-sout-audio --quiet --qt-start-minimized --sout="#transcode{vcodec=h264,fps=30}:gather:std{access=http,mux=ts,dst=':3001/1/stream.mp4'}" &
+
+vlc -I dummy -vvv ./stream/1/video.mp4 --repeat --sout-keep --no-sout-audio --quiet --qt-start-minimized --sout=#transcode{vcodec=h264,fps=30}:gather:std{access=http,mux=ts,dst=':3001/1/stream.mp4'}
+
+ps aux | grep vlc
+cvlc -vvv /home/platforma/tv/stream/1/video.mp4 --repeat --sout-keep --no-sout-audio --quiet --qt-start-minimized --sout="#transcode{vcodec=h264,fps=30}:gather:std{access=http,mux=ts,dst=':3001/1/stream.mp4'}" &
+
+</body>
+</html>

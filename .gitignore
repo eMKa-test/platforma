@@ -1,0 +1,13 @@
+.idea/
+.sublime/
+.vscode/
+
+node_modules/
+public_html/
+
+distr/
+
+.env
+.env.*
+.editorconfig
+*.DS_Store

@@ -1,0 +1,175 @@
+.Grid {
+    position: relative;
+}
+
+.Grid-content {
+    margin-bottom: 1.5rem;
+}
+
+.Grid-content-header {
+    margin-bottom: 1.5rem;
+}
+
+.Grid-icon-img {
+    width: 3.375rem;
+    max-width: 100%;
+    float: left;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+}
+
+.Grid-content-title {
+    line-height: 1.1;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.Grid-content-text {
+    line-height: 1.3;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.Grid-content-text ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.Grid-content-text ul li {
+    margin-bottom: 0.5rem;
+}
+
+.Grid-image-img {
+    width: 651px;
+    max-width: 100%;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.25);
+}
+
+.Grid_right .Grid-content-title {
+    text-align: left;
+}
+
+.Grid_right:before {
+    left: 0;
+    right: initial;
+}
+
+.Grid_right .Grid-icon-img {
+    float: right;
+    margin-right: 0;
+    margin-left: 1.5rem;
+}
+
+@media only screen and (min-width: 560px) {
+    .Grid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Grid-content-header {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 1rem;
+    }
+    .Grid-content-title {
+        max-width: 70%;
+    }
+    .Grid-image,
+    .Grid-content-text {
+        flex: 0 0 46%;
+    }
+    .Grid_right .Grid-icon-img {
+        order: 1;
+    }
+}
+
+@media only screen and (min-width: 560px) and (min-height: 650px)  {
+    .Grid-content-title {
+        font-size: 1.6rem;
+    }
+    .Grid-image,
+    .Grid-content-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 800px) and (min-height: 720px)  {
+    .Grid-image-img {
+        width: 617px;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1100px) and (min-height: 720px) {
+    .Grid-content-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-height: 650px) {
+    .Grid-content-title {
+        margin-bottom: 2rem;
+    }
+    .Grid:after,
+    .Grid:before {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 3px;
+        background-color: #bea67c;
+        position: absolute;
+        right: 0;
+    }
+    .Grid:before {
+        top: -0.7rem;
+    }
+    .Grid:after {
+        width: 100%;
+        bottom: -1.3rem;
+    }
+    .Grid-content-text {
+        line-height: 1.41;
+    }
+
+    .Grid-content-header {
+        border-bottom: 1px solid #000000;
+        padding-bottom: 1rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) and (min-height: 450px) {
+    .Grid:before {
+        top: -1.8rem;
+    }
+    .Grid:after {
+        width: 100%;
+        bottom: -2rem;
+    }
+}
+
+@media only screen and (min-height: 750px) {
+    .Grid:before {
+        top: -3rem;
+    }
+    .Grid:after {
+        width: 100%;
+        bottom: -3rem;
+    }
+}
+
+@media only screen and (min-height: 850px) {
+    .Grid:before {
+        top: -4rem;
+    }
+    .Grid:after {
+        width: 100%;
+        bottom: -3rem;
+    }
+    .Grid-content-header {
+        border-bottom: 1px solid #000;
+    }
+}
